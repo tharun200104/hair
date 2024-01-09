@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Information</title>
+  <link rel="stylesheet" href="Add-to-cart.css">
+</head>
+<body>
+  <h1>Enter Your Information</h1>
+  <form action="connect.php" method="post">
+    
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required><br><br>
+
+    <label for="flatNo">Flat No:</label>
+    <input type="text" id="flatNo" name="flatNo" required><br><br>
+
+    <label for="doorNo">Door No:</label>
+    <input type="text" id="doorNo" name="doorNo" required><br><br>
+
+    <label for="street">Street:</label>
+    <input type="text" id="street" name="street" required><br><br>
+
+    <label for="area">Area:</label>
+    <input type="text" id="area" name="area" required><br><br>
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required><br><br>
+
+    <label for="district">District:</label>
+    <input type="text" id="district" name="district" required><br><br>
+
+    <label for="pincode">Pincode:</label>
+    <input type="text" id="pincode" name="pincode" required><br><br>
+
+    <label for="email">Email (Optional):</label>
+    <input type="email" id="email" name="email"><br><br>
+
+    <button type="submit" >Submit</button>
+    
+
+  </form>
+
+  <script>
+    document.getElementById('userInfoForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const flatNo = document.getElementById('flatNo').value;
+      const doorNo = document.getElementById('doorNo').value;
+      const street = document.getElementById('street').value;
+      const area = document.getElementById('area').value;
+      const city = document.getElementById('city').value;
+      const district = document.getElementById('district').value;
+      const pincode = document.getElementById('pincode').value;
+      const email = document.getElementById('email').value;
+
+      // You can handle the data here, for example, send it to a server using fetch()
+      console.log('Name:', name);
+      console.log('Phone:', phone);
+      console.log('Flat No:', flatNo);
+      console.log('Door No:', doorNo);
+      console.log('Street:', street);
+      console.log('Area:', area);
+      console.log('City:', city);
+      console.log('District:', district);
+      console.log('Pincode:', pincode);
+      console.log('Email:', email);
+      
+      // Clear the form after submission
+      document.getElementById('userInfoForm').reset();
+    });
+  </script>
+</body>
+</html>
